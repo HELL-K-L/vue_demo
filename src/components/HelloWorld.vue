@@ -31,7 +31,7 @@ export default {
       });
     },
     gohome() {
-      console.log(this.$route.params.username);
+      console.log(this.$route.path);
       this.$router.push("/about");
     }
   }

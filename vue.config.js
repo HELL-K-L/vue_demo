@@ -12,4 +12,5 @@ module.exports = {
       });
     }
   }
+  //productionSourceMap: false //打包是加入，可以删除不必哟的map文件
 };
