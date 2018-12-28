@@ -33,14 +33,14 @@
 export default {
   data() {
     return {
-      activeIndex: "/"
+      activeIndex: '/',
     };
   },
   watch: {
     $route() {
       this.activeIndex = this.$route.path;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -48,7 +48,7 @@ export default {
 #app {
   color: #2c3e50;
   text-align: center;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -11,30 +11,29 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
+import { SOME_MUTATION } from '@/store/mutation-types';
 
 export default {
-  name: "ddd",
-  computed: {
-    username() {
-      // 我们很快就会看到 `params` 是什么
-      return this.$route.params.username;
-    }
-  },
+  name: 'ddd',
   mounted() {
-    this.getHomeData();
+    console.log(this.$store.state.count);
+    // this.getHomeData();
   },
   methods: {
     getHomeData() {
-      axios.get("/API/kylin", { params: { ID: 12 } }).then(res => {
+      axios.get('/API/kylin', { params: { ID: 12 } }).then(res => {
         console.log(res);
       });
     },
     gohome() {
-      console.log(this.$route.path);
-      this.$router.push("/about");
-    }
-  }
+      this.$router.push('/about');
+      this.$store.commit({
+        type: SOME_MUTATION,
+        amount: 10,
+      });
+    },
+  },
 };
 </script>
 

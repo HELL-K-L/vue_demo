@@ -11,6 +11,13 @@ module.exports = {
         res.json(Mock.MockPost(req, res));
       });
     }
-  }
-  //productionSourceMap: false //打包是加入，可以删除不必哟的map文件
+  },
+  productionSourceMap: process.env.NODE_ENV !== "production" //false, //打包是加入，可以删除不必哟的map文件
+  // configureWebpack: {   //设置别名
+  //   resolve: {
+  //     alias: {
+  //       "@S": "@/store/"
+  //     }
+  //   }
+  // }
 };
